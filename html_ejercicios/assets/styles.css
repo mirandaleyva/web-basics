@@ -1,0 +1,26 @@
+html{
+  scroll-behavior: smooth; /*para que la pagina suba y baje suabe, con efecto y no de golpe*/
+}
+
+body{
+  font-family: sans-serif;
+}
+
+h1{
+  color: red;
+}
+
+h2{
+  color: blue;
+}
+
+img,
+video{
+  max-width: 100%;
+  height: auto;
+}
+
+iframe{
+  width: 80%;
+  height: 400px;
+}

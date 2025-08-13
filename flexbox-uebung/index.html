@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbox-Übung</title>
+  <!-- Wechsle hier zwischen styles.css (Starter) und solution.css (Lösung) -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Nur Demo-Farben/Typo, keine Layout-Hilfe */
+    :root {
+      --bg: #0f172a; /* slate-900 */
+      --panel: #111827; /* gray-900 */
+      --muted: #1f2937; /* gray-800 */
+      --card: #111827;
+      --text: #e5e7eb; /* gray-200 */
+      --accent: #60a5fa;
+      --soft: #334155; /* slate-700 */
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu; }
+    h1, h2, h3 { margin: 0 0 .5rem; }
+    p { margin: 0 0 .5rem; color: #cbd5e1; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 16px; }
+    .box { background: var(--panel); border: 1px solid var(--soft); border-radius: 12px; padding: 12px; }
+    .muted { background: var(--muted); border: 1px dashed #475569; }
+    .tag { font-size: 12px; color: #cbd5e1; opacity: 0.9; }
+    .chip { background: #0b1220; border: 1px solid #2b3446; padding: 2px 8px; border-radius: 999px; font-size: 12px; color:#cbd5e1; }
+    .spacer { height: 16px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Flexbox-Übung</h1>
+    <p class="tag">Arbeite ausschließlich in <code>styles.css</code>. Nutze nur Flexbox (kein Grid).</p>
+
+    <!-- Aufgabe 1: Header -->
+    <section class="box" id="aufgabe-1">
+      <h2>Aufgabe 1: Header</h2>
+      <div class="header muted" data-task="1-header">
+        <div class="logo chip">LOGO</div>
+        <nav class="main-nav">
+          <a class="chip" href="#">Home</a>
+          <a class="chip" href="#">Produkte</a>
+          <a class="chip" href="#">Preise</a>
+          <a class="chip" href="#">Kontakt</a>
+        </nav>
+        <div class="user-menu">
+          <button class="chip">Anmelden</button>
+        </div>
+      </div>
+      <p class="tag">Ziel: Logo links, Nav zentriert gleichmäßig, User rechts; Höhe 64px, vertikal mittig.</p>
+    </section>
+
+    <div class="spacer"></div>
+
+    <!-- Aufgabe 2: Sidebar + Content + Karten -->
+    <section class="box" id="aufgabe-2">
+      <h2>Aufgabe 2: Sidebar-Layout</h2>
+      <div class="layout muted" data-task="2-layout">
+        <aside class="sidebar">
+          <h3>Menü</h3>
+          <ul>
+            <li>Dashboard</li>
+            <li>Berichte</li>
+            <li>Einstellungen</li>
+          </ul>
+        </aside>
+        <main class="content">
+          <h3>Inhalt</h3>
+          <p>Unten Karten-Container mit umbruchfähigen Karten.</p>
+          <div class="cards" data-task="2-cards">
+            <div class="card box">Karte 1</div>
+            <div class="card box">Karte 2</div>
+            <div class="card box">Karte 3</div>
+            <div class="card box">Karte 4</div>
+            <div class="card box">Karte 5</div>
+            <div class="card box">Karte 6</div>
+          </div>
+        </main>
+      </div>
+      <p class="tag">Ziel: Sidebar fix 240px; Content füllt Rest; Karten max. 3 pro Reihe, saubere Gaps.</p>
+    </section>
+
+    <div class="spacer"></div>
+
+    <!-- Aufgabe 3: Footer responsiv -->
+    <section class="box" id="aufgabe-3">
+      <h2>Aufgabe 3: Footer</h2>
+      <footer class="footer muted" data-task="3-footer">
+        <div class="f-col">
+          <h3>Firma</h3>
+          <p>Über uns</p>
+          <p>Karriere</p>
+          <p>Presse</p>
+        </div>
+        <div class="f-col">
+          <h3>Produkte</h3>
+          <p>App</p>
+          <p>Integrationen</p>
+          <p>API</p>
+        </div>
+        <div class="f-col">
+          <h3>Service</h3>
+          <p>Hilfe</p>
+          <p>Kontakt</p>
+          <p>Status</p>
+        </div>
+        <div class="f-col">
+          <h3>Rechtliches</h3>
+          <p>Impressum</p>
+          <p>Datenschutz</p>
+          <p>AGB</p>
+        </div>
+      </footer>
+      <p class="tag">Ziel: Breite Ansicht = Zeile, space-between; schmal (&lt;600px) = Spalte, zentrierte Headings.</p>
+    </section>
+
+    <div class="spacer"></div>
+
+    <section class="box" id="bonus">
+      <h2>Bonus: Reihenfolge per Flexbox</h2>
+      <p class="tag">Auf sehr schmalen Ansichten Logo oben, Nav darunter, User zuletzt (nur via <code>order</code>).</p>
+    </section>
+  </div>
+</body>
+</html>

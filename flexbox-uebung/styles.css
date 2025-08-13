@@ -1,0 +1,78 @@
+
+/* ==========================================
+   Flexbox-Übung – Starter (hier arbeiten)
+   Nutze NUR Flexbox (kein Grid).
+   ========================================== */
+
+/* ---------- Aufgabe 1: Header ---------- */
+.header {
+  /* TODO: Flex-Container, Höhe 64px, horizontale Verteilung Logo/Nav/User */
+  /* z.B. display:flex; align-items:center; justify-content:space-between; padding: ... */
+}
+
+.header .main-nav {
+  /* TODO: horizontale Nav mit gleichmäßigen Abständen */
+}
+
+.header .user-menu {
+  /* optional: eigener Flex-Container */
+}
+
+/* Bonus (optional): Reihenfolge auf sehr schmalen Ansichten umstellen */
+/* @media (max-width: 480px) {
+  .header { flex-direction: column; gap: 8px; }
+  .header .logo { order: 1; }
+  .header .main-nav { order: 2; }
+  .header .user-menu { order: 3; }
+} */
+
+/* ---------- Aufgabe 2: Sidebar-Layout ---------- */
+.layout {
+  min-height: 400px;
+  /* TODO: Flex-Zeile mit Sidebar + Content */
+}
+
+.sidebar {
+  /* TODO: feste Breite 240px mit Flexbox-Mitteln (z.B. flex:0 0 240px) */
+  padding: 12px;
+  border-right: 1px solid #2b3446;
+}
+
+.content {
+  /* TODO: restliche Breite einnehmen (z.B. flex:1 1 auto) */
+  padding: 12px;
+  overflow: auto; /* Content darf scrollen */
+}
+
+/* Karten-Container */
+.cards {
+  /* TODO: Flex-Container mit Umbruch (wrap) und Lücken (gap) */
+  margin-top: 12px;
+}
+
+.card {
+  /* TODO: Breite so definieren, dass max. 3 pro Reihe möglich sind.
+     Tipp: flex: 1 1 calc(33.333% - GAP_KORREKTUR);
+  */
+  min-height: 80px;
+}
+
+/* ---------- Aufgabe 3: Footer ---------- */
+.footer {
+  /* TODO: Zeile auf breit, gleichmäßig verteilen */
+  padding: 12px;
+}
+
+.footer .f-col {
+  /* optional: Ausrichtung innerhalb der Spalte */
+}
+
+/* Responsiv umschalten (<600px): Spalte, zentrierte Überschriften */
+@media (max-width: 600px) {
+  .footer {
+    /* TODO: column + zentrieren */
+  }
+  .footer .f-col h3 {
+    /* TODO: zentrieren */
+  }
+}
